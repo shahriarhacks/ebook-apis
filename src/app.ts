@@ -1,11 +1,14 @@
 import express, { Application, NextFunction, Request, Response } from "express";
 import globalErrorHandler from "./middlewares/globalErrorHandler";
 import createHttpError from "http-errors";
+import router from "./modules/routes";
 
 const app: Application = express();
 
+// Calling all api routes
+app.use("/api/1", router);
+
 app.get("/", (_req, res) => {
-   throw createHttpError(500, "something went wrong");
    res.status(200).json({
       message: "Welcome to ebook api Server!",
    });
