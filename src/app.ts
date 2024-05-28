@@ -5,8 +5,11 @@ import router from "./modules/routes";
 
 const app: Application = express();
 
+// JSON parser
+app.use(express.json());
+
 // Calling all api routes
-app.use("/api/1", router);
+app.use("/api/v1", router);
 
 app.get("/", (_req, res) => {
    res.status(200).json({
