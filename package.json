@@ -8,8 +8,9 @@
    "keywords": [],
    "author": "SHAHRIAR AHMED <shahriar@ecoysoft.com>",
    "license": "ISC",
-   "description": "",
+   "description": "This ia an ebook server apis",
    "devDependencies": {
+      "@types/dotenv": "^8.2.0",
       "@types/express": "^4.17.21",
       "@types/node": "^20.12.12",
       "nodemon": "^3.1.1",
@@ -17,6 +18,7 @@
       "typescript": "^5.4.5"
    },
    "dependencies": {
+      "dotenv": "^16.4.5",
       "express": "^4.19.2"
    }
 }
